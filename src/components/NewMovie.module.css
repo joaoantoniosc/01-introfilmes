@@ -1,0 +1,215 @@
+.boxDetails {
+    background-color: var(--gray-800);
+    min-height: 380px;
+    grid-column: 1 / span 5;
+    margin: 0.6rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 16px;
+    border-top: 16px solid var(--yellow-700);
+}
+
+.boxDetails header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.boxDetails header {
+    color: var(--yellow-700);
+}
+
+.boxDetails header button{
+    color: var(--gray-400);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    line-height: 0;
+    transition: all 0.2s ease;
+}
+
+.boxDetails header button:hover{
+    color: var(--red-500);
+}
+
+
+.boxDetails img{
+    width: 100%;
+    height: 364px;
+    border-radius: 0px 0px 0px 16px;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+
+.desciptionDetails{
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.desciptionDetails h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.desciptionDetails p{
+    font-size: 1rem;
+}
+
+
+.desciptionDetails button[type="submit"]{
+    margin-top: 1.5rem;
+    padding: 0.75rem 3rem;
+    border-radius: 0px;
+    border: 1px solid var(--yellow-700);
+    background-color: var(--gray-800);
+    font-size: 0.75rem;
+    color: var(--yellow-700);
+    font-weight: 700;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.desciptionDetails button:hover{
+    opacity: 0.7;
+}
+
+/*YEAR*/
+.desciptionDetails input[name="movieYear"]{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.4rem;
+    background-color: var(--gray-700);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    border: none;
+    color: var(--gray-400);
+    height: 1.6rem;
+    width: 50px;
+}
+
+/*TITLE*/
+.desciptionDetails input[name="movieName"]{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+    background-color: var(--gray-800);
+    border: none;
+    width: 100%;
+    font-weight: 600;
+    border-bottom: 2px solid var(--gray-800);
+    transition: border .2s ease;
+}
+
+.desciptionDetails textarea{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--gray-200);
+    background-color: var(--gray-800);
+    border: none;
+    width: 100%;
+    resize: vertical;
+    border-bottom: 2px solid var(--gray-800);
+    transition: border .2s ease-out;
+}
+
+input[name="movieName"]:focus, textarea:focus{
+    outline: none!important;
+    border-bottom: 2px solid var(--yellow-700);
+    background-color: var(--gray-200)!important;
+}
+
+input[name="movieYear"]:focus{
+  outline: none;
+  background-color: var(--gray-900);
+}
+
+
+
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+    font-size: 24px;
+  }
+  
+  .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .rating label:last-child {
+    position: static;
+  }
+  
+  .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .rating label:last-child .icon {
+    color: var(--gray-400);
+  }
+  
+  .rating:not(:hover) label input:checked ~ .icon,
+  .rating:hover label:hover input ~ .icon {
+    color: var(--yellow-700);
+  }
+  
+  .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px var(--yellow-700);
+  }
+
+@media (max-width: 1024px) {
+    .boxDetails {
+        grid-column: 1 / span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .boxDetails {
+        grid-column: 1 / span 2;
+        grid-template-columns: 100%;
+    }
+
+    .boxDetails img{
+        border-radius: 0px;
+    }
+}
