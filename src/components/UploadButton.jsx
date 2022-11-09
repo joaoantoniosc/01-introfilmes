@@ -13,6 +13,7 @@ const FileInput = () => {
 
   return (
     <div className={styles.uploadField}>
+      
       <input
         accept="image/*"
         type="file"

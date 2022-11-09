@@ -6,14 +6,14 @@ import { useState } from 'react';
 
 export function Details(props) {
 
+    
     function handleDeleteMovie(){
         console.log('Deletar')
-
         //onDeleteMovie(movie)
     }
 
 
-    console.log(props)
+   // console.log(props)
     
     
     return(

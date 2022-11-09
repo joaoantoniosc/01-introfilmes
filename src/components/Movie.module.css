@@ -43,6 +43,24 @@
     opacity: 1;
 }
 
+.selectorBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selector{
+    height: 40px;
+    width: 40px;
+    margin-top: -1rem;
+    margin-bottom: -0.6rem;
+    background-color: var(--yellow-700);
+    border-left: 20px solid var(--gray-900);
+    border-top: 20px solid var(--gray-900);
+    border-right: 20px solid var(--gray-900);
+    border-bottom: 20px solid var(--yellow-700);
+}
+
 @media (max-width: 1024px) {
 
     

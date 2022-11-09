@@ -3,17 +3,31 @@
     position: relative;
 }
 
-.imagePreview{
+.imagePreview img{
     width: 100%;
-    height: 365px;
-    position: absolute;
+    height: 375px;
+    border: 0px;
+    border-radius: 0px 0px 0px 16px;
+    object-fit: cover;
 }
 
 input[name="uploadInput"], button[name="uploadCover"]{
     width: 100%;
-    height: 365px;
+    height: 375px!important;
     cursor: pointer;
     background-color: var(--gray-700);
     color: var(--gray-100);
     border: 0px;
+    border-radius: 0px 0px 0px 16px;
+}
+
+.uploadField{
+    color: var(--gray-700);
+    font-size: 0px;
+}
+
+@media (max-width: 768px) {
+    input[name="uploadInput"], button[name="uploadCover"]{
+        border-radius: 0px;
+    }
 }
